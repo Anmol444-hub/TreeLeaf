@@ -7,7 +7,7 @@ This project includes a Spring Boot application, Terraform configurations for in
 ![Docker Build](images/3.jpg)
 *Figure 1: Building the Docker image*
 
-![Docker Run](images/1.jpg
+![Docker Run](images/1.jpg)
 *Figure 2: Running the Docker container*
 
 ![API Test](images/2.jpg)
