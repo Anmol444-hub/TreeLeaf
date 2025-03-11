@@ -88,3 +88,51 @@ To deploy:
 2. For production:
    - Push or merge your changes to the `main` branch
    - The CI/CD pipeline will automatically deploy to the prod environment
+
+## Monitoring with Prometheus & Grafana
+
+### Set Up Monitoring
+
+1. Add the Prometheus community Helm repository:
+   ```
+   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+   helm repo update
+   ```
+
+2. Install Prometheus and Grafana using Helm:
+   ```
+   helm install prometheus prometheus-community/kube-prometheus-stack
+   ```
+
+### Access Grafana
+
+1. Expose the Grafana service:
+   ```
+   kubectl port-forward svc/prometheus-grafana 3000:80
+   ```
+
+2. Access Grafana dashboard:
+   - Open your web browser and go to: http://localhost:3000
+   - Default login credentials:
+     - Username: admin
+     - Password: prom-operator
+
+### Configuring Dashboards
+
+1. In Grafana, go to "Dashboards" > "Import"
+2. Import dashboard ID 12740 for a Spring Boot dashboard
+3. Select the Prometheus data source
+
+### Monitoring Your Application
+
+- View application metrics in the imported dashboard
+- Key metrics to monitor:
+  - JVM memory usage
+  - HTTP request rate
+  - Response times
+  - Error rates
+
+### Alerting
+
+1. In Grafana, go to "Alerting" > "Notification channels" to set up alert destinations
+2. Create alert rules based on your application's critical metrics
