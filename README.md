@@ -2,6 +2,18 @@
 
 This project includes a Spring Boot application, Terraform configurations for infrastructure, and Helm charts for Kubernetes deployment.
 
+### Sample Running locally Docker image
+
+![Docker Build](images/3.jpg)
+*Figure 1: Building the Docker image*
+
+![Docker Run](images/1.jpg
+*Figure 2: Running the Docker container*
+
+![API Test](images/2.jpg)
+*Figure 3: Testing the API endpoints*
+
+
 ## Dockerized Application
 
 Build the Docker image:
