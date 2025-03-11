@@ -1,0 +1,10 @@
+variable "region_azs" {}
+variable "num_public_subnets" {}
+variable "num_private_subnets" {}
+variable "cluster_name" {}
+variable "cluster_version" {}
+variable "vpc_cidr" {}
+variable "helmfile_version" {}
+variable "kubectl_version" {}
+variable "project_name" {}
+variable "common_tags" {}
